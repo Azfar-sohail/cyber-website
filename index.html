@@ -1,0 +1,2032 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CYBER TECH - Computer Coaching Institute</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #00f3ff;
+            --secondary: #ff00c8;
+            --accent: #00ff66;
+            --dark: #0a0a1a;
+            --darker: #050510;
+            --light: #e0e0ff;
+            --gray: #7e7ea7;
+            --danger: #ff2965;
+            --tech-gradient: linear-gradient(135deg, #00f3ff, #ff00c8);
+            --circuit-bg: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%2300f3ff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: var(--darker);
+            color: var(--light);
+            line-height: 1.6;
+            font-family: 'Roboto', sans-serif;
+            background-image: var(--circuit-bg);
+            position: relative;
+            overflow-x: hidden;
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(10, 10, 26, 0.9) 0%, rgba(5, 5, 16, 0.95) 100%);
+            z-index: -1;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: rgba(5, 5, 16, 0.8);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 20px rgba(0, 243, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 243, 255, 0.2);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo-icon {
+            font-size: 2rem;
+            background: var(--tech-gradient);
+            color: var(--dark);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 15px rgba(0, 243, 255, 0.5);
+        }
+        
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: bold;
+            font-family: 'Orbitron', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            background: var(--tech-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+            align-items: center;
+        }
+        
+        nav a {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--tech-gradient);
+            transition: width 0.3s ease;
+        }
+        
+        nav a:hover {
+            color: var(--primary);
+        }
+        
+        nav a:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--primary);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(5, 5, 16, 0.8), rgba(5, 5, 16, 0.9)), url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 6rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, rgba(0, 243, 255, 0.1) 0%, transparent 70%);
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-family: 'Orbitron', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 20px rgba(0, 243, 255, 0.7);
+            background: var(--tech-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            color: var(--light);
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--tech-gradient);
+            color: var(--dark);
+            padding: 0.8rem 1.8rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-family: 'Orbitron', sans-serif;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            box-shadow: 0 0 15px rgba(0, 243, 255, 0.5);
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: all 0.4s ease;
+            z-index: -1;
+        }
+        
+        .btn:hover::before {
+            left: 100%;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 25px rgba(0, 243, 255, 0.7);
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(135deg, var(--secondary), var(--accent));
+            box-shadow: 0 0 15px rgba(255, 0, 200, 0.5);
+        }
+        
+        .btn-secondary:hover {
+            box-shadow: 0 0 25px rgba(255, 0, 200, 0.7);
+        }
+        
+        .btn-danger {
+            background: linear-gradient(135deg, var(--danger), var(--secondary));
+            box-shadow: 0 0 15px rgba(255, 41, 101, 0.5);
+        }
+        
+        .btn-danger:hover {
+            box-shadow: 0 0 25px rgba(255, 41, 101, 0.7);
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 5rem 0;
+            position: relative;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-family: 'Orbitron', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background: var(--tech-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 15px rgba(0, 243, 255, 0.5);
+        }
+        
+        .section-title p {
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+        
+        /* Courses Section */
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .course-card {
+            background: rgba(10, 10, 26, 0.7);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 1px solid rgba(0, 243, 255, 0.2);
+            backdrop-filter: blur(5px);
+            position: relative;
+        }
+        
+        .course-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--tech-gradient);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: -1;
+        }
+        
+        .course-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 243, 255, 0.3);
+            border-color: var(--primary);
+        }
+        
+        .course-card:hover::before {
+            opacity: 0.1;
+        }
+        
+        .course-img {
+            height: 200px;
+            background: linear-gradient(135deg, var(--dark), var(--darker));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .course-img::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--circuit-bg);
+            opacity: 0.3;
+        }
+        
+        .course-content {
+            padding: 1.5rem;
+        }
+        
+        .course-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--light);
+            font-family: 'Orbitron', sans-serif;
+        }
+        
+        .course-content p {
+            color: var(--gray);
+            margin-bottom: 1rem;
+        }
+        
+        .course-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .price {
+            font-weight: bold;
+            color: var(--primary);
+            font-size: 1.2rem;
+            font-family: 'Orbitron', sans-serif;
+        }
+        
+        /* Teachers Section */
+        .teachers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .teacher-card {
+            background: rgba(10, 10, 26, 0.7);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 243, 255, 0.2);
+            backdrop-filter: blur(5px);
+            position: relative;
+        }
+        
+        .teacher-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--tech-gradient);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: -1;
+        }
+        
+        .teacher-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 243, 255, 0.3);
+            border-color: var(--primary);
+        }
+        
+        .teacher-card:hover::before {
+            opacity: 0.1;
+        }
+        
+        .teacher-img {
+            height: 200px;
+            background: linear-gradient(135deg, var(--dark), var(--darker));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .teacher-img::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--circuit-bg);
+            opacity: 0.3;
+        }
+        
+        .teacher-content {
+            padding: 1.5rem;
+        }
+        
+        .teacher-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--light);
+            font-family: 'Orbitron', sans-serif;
+        }
+        
+        .teacher-content p {
+            color: var(--gray);
+            margin-bottom: 1rem;
+        }
+        
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: #25D366;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 0.5rem;
+            transition: all 0.3s ease;
+            font-family: 'Orbitron', sans-serif;
+        }
+        
+        .whatsapp-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.5);
+        }
+        
+        /* Footer */
+        footer {
+            background: rgba(5, 5, 16, 0.9);
+            color: white;
+            padding: 3rem 0 1rem;
+            border-top: 1px solid rgba(0, 243, 255, 0.2);
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            font-family: 'Orbitron', sans-serif;
+        }
+        
+        .footer-section p {
+            margin-bottom: 0.5rem;
+            color: var(--gray);
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-icons a {
+            color: var(--light);
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            color: var(--primary);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--gray);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .courses-grid,
+            .teachers-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Admin Login Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(5, 5, 16, 0.9);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(5px);
+        }
+        
+        .modal-content {
+            background: rgba(10, 10, 26, 0.9);
+            padding: 2rem;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 400px;
+            border: 1px solid rgba(0, 243, 255, 0.3);
+            box-shadow: 0 0 30px rgba(0, 243, 255, 0.3);
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .modal-header h3 {
+            color: var(--primary);
+            font-family: 'Orbitron', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary);
+        }
+        
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
+            z-index: 100;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-float:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.7);
+        }
+
+        /* Admin Dashboard */
+        .admin-dashboard {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(5, 5, 16, 0.95);
+            z-index: 1000;
+            overflow-y: auto;
+            padding: 2rem 0;
+        }
+        
+        .dashboard-content {
+            background: rgba(10, 10, 26, 0.9);
+            width: 90%;
+            max-width: 1000px;
+            margin: 0 auto;
+            border-radius: 8px;
+            border: 1px solid rgba(0, 243, 255, 0.3);
+            box-shadow: 0 0 30px rgba(0, 243, 255, 0.3);
+            overflow: hidden;
+        }
+        
+        .dashboard-header {
+            background: rgba(5, 5, 16, 0.8);
+            padding: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(0, 243, 255, 0.3);
+        }
+        
+        .dashboard-header h2 {
+            color: var(--primary);
+            font-family: 'Orbitron', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .dashboard-body {
+            padding: 2rem;
+        }
+        
+        /* Tabs for Admin Panel */
+        .admin-tabs {
+            display: flex;
+            border-bottom: 2px solid rgba(0, 243, 255, 0.3);
+            margin-bottom: 1.5rem;
+        }
+        
+        .admin-tab {
+            padding: 0.8rem 1.5rem;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s ease;
+            color: var(--gray);
+            font-family: 'Orbitron', sans-serif;
+        }
+        
+        .admin-tab.active {
+            border-bottom: 3px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        .admin-tab-content {
+            display: none;
+        }
+        
+        .admin-tab-content.active {
+            display: block;
+        }
+        
+        /* Course Detail Modal */
+        .course-detail-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(5, 5, 16, 0.9);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            overflow-y: auto;
+            padding: 2rem 0;
+            backdrop-filter: blur(5px);
+        }
+        
+        .course-detail-content {
+            background: rgba(10, 10, 26, 0.9);
+            padding: 2rem;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 800px;
+            position: relative;
+            border: 1px solid rgba(0, 243, 255, 0.3);
+            box-shadow: 0 0 30px rgba(0, 243, 255, 0.3);
+        }
+        
+        .course-detail-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .course-detail-header h2 {
+            color: var(--primary);
+            font-family: 'Orbitron', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .course-detail-icon {
+            font-size: 4rem;
+            color: var(--primary);
+            margin-right: 1.5rem;
+        }
+        
+        .course-detail-body {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        
+        .course-detail-info {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .course-detail-image {
+            flex: 1;
+            min-width: 300px;
+            height: 300px;
+            background: linear-gradient(135deg, var(--dark), var(--darker));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 5rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .course-detail-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--circuit-bg);
+            opacity: 0.3;
+        }
+        
+        /* Form Styles */
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--light);
+            font-family: 'Orbitron', sans-serif;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid rgba(0, 243, 255, 0.3);
+            border-radius: 4px;
+            font-size: 1rem;
+            background: rgba(5, 5, 16, 0.7);
+            color: var(--light);
+            transition: all 0.3s ease;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 10px rgba(0, 243, 255, 0.3);
+        }
+        
+        /* Management Lists */
+        .management-list {
+            max-height: 400px;
+            overflow-y: auto;
+            padding-right: 10px;
+        }
+        
+        .management-item {
+            background: rgba(5, 5, 16, 0.5);
+            padding: 1rem;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .management-item-info h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-family: 'Orbitron', sans-serif;
+        }
+        
+        /* About Us Profiles */
+        .profile-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .profile-card {
+            background: rgba(10, 10, 26, 0.7);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 243, 255, 0.2);
+            backdrop-filter: blur(5px);
+        }
+        
+        .profile-img {
+            height: 250px;
+            background: linear-gradient(135deg, var(--dark), var(--darker));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 5rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .profile-img::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--circuit-bg);
+            opacity: 0.3;
+        }
+        
+        .profile-content {
+            padding: 1.5rem;
+        }
+        
+        .profile-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--light);
+            font-family: 'Orbitron', sans-serif;
+        }
+        
+        .profile-content .role {
+            color: var(--primary);
+            font-weight: 500;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .profile-content p {
+            color: var(--gray);
+            margin-bottom: 1rem;
+        }
+        
+        /* Logout Button */
+        #logoutBtn {
+            display: none;
+        }
+        
+        /* Tech Elements */
+        .tech-border {
+            position: relative;
+        }
+        
+        .tech-border::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: var(--tech-gradient);
+            border-radius: 10px;
+            z-index: -1;
+            animation: borderPulse 2s infinite;
+        }
+        
+        @keyframes borderPulse {
+            0% {
+                opacity: 0.7;
+            }
+            50% {
+                opacity: 0.3;
+            }
+            100% {
+                opacity: 0.7;
+            }
+        }
+        
+        /* Glowing Text */
+        .glow-text {
+            text-shadow: 0 0 10px currentColor;
+        }
+        
+        /* Animated Background Elements */
+        .floating-tech {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: rgba(0, 243, 255, 0.1);
+            border-radius: 50%;
+            filter: blur(40px);
+            animation: float 15s infinite ease-in-out;
+            z-index: -1;
+        }
+        
+        .floating-tech:nth-child(1) {
+            top: 20%;
+            left: 10%;
+            width: 150px;
+            height: 150px;
+            background: rgba(255, 0, 200, 0.1);
+            animation-delay: 0s;
+        }
+        
+        .floating-tech:nth-child(2) {
+            top: 60%;
+            right: 10%;
+            width: 120px;
+            height: 120px;
+            background: rgba(0, 255, 102, 0.1);
+            animation-delay: -5s;
+        }
+        
+        .floating-tech:nth-child(3) {
+            bottom: 20%;
+            left: 20%;
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 41, 101, 0.1);
+            animation-delay: -10s;
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+            25% {
+                transform: translate(20px, 20px) rotate(5deg);
+            }
+            50% {
+                transform: translate(0, 40px) rotate(0deg);
+            }
+            75% {
+                transform: translate(-20px, 20px) rotate(-5deg);
+            }
+        }
+
+        /* Dynamic Content Windows */
+        .content-window {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            max-width: 1000px;
+            height: 80vh;
+            background: rgba(10, 10, 26, 0.95);
+            border: 1px solid rgba(0, 243, 255, 0.3);
+            box-shadow: 0 0 30px rgba(0, 243, 255, 0.3);
+            z-index: 1000;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .window-header {
+            background: rgba(5, 5, 16, 0.8);
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(0, 243, 255, 0.3);
+        }
+        
+        .window-header h3 {
+            color: var(--primary);
+            font-family: 'Orbitron', sans-serif;
+        }
+        
+        .window-close {
+            background: none;
+            border: none;
+            color: var(--primary);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        .window-body {
+            padding: 2rem;
+            height: calc(100% - 60px);
+            overflow-y: auto;
+        }
+        
+        .window-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 999;
+            backdrop-filter: blur(5px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated Background Elements -->
+    <div class="floating-tech"></div>
+    <div class="floating-tech"></div>
+    <div class="floating-tech"></div>
+
+    <!-- Window Overlay -->
+    <div class="window-overlay" id="windowOverlay"></div>
+
+    <!-- Dynamic Content Windows -->
+    <div class="content-window" id="homeWindow">
+        <div class="window-header">
+            <h3>Home</h3>
+            <button class="window-close">&times;</button>
+        </div>
+        <div class="window-body">
+            <div class="hero" style="padding: 2rem 0; background: none;">
+                <h1>Welcome to CYBER TECH</h1>
+                <p>Empowering the next generation of technology experts with industry-relevant computer education and professional training.</p>
+                <a href="#courses" class="btn">Explore Courses</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-window" id="coursesWindow">
+        <div class="window-header">
+            <h3>Our Courses</h3>
+            <button class="window-close">&times;</button>
+        </div>
+        <div class="window-body">
+            <div class="courses-grid" id="coursesContainer">
+                <!-- Courses will be dynamically loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <div class="content-window" id="teachersWindow">
+        <div class="window-header">
+            <h3>Our Teachers</h3>
+            <button class="window-close">&times;</button>
+        </div>
+        <div class="window-body">
+            <div class="teachers-grid" id="teachersContainer">
+                <!-- Teachers will be dynamically loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <div class="content-window" id="aboutWindow">
+        <div class="window-header">
+            <h3>About Us</h3>
+            <button class="window-close">&times;</button>
+        </div>
+        <div class="window-body">
+            <div style="max-width: 800px; margin: 0 auto;">
+                <p>CYBER TECH is a premier computer coaching institute founded by Madam Tasneem with the vision to make quality computer education accessible to everyone. We believe in practical, hands-on learning that prepares students for real-world challenges.</p>
+                <p>Our institute boasts state-of-the-art computer labs, experienced faculty, and a curriculum that is constantly updated to keep pace with the rapidly evolving technology landscape.</p>
+                
+                <h3 style="color: var(--primary); font-family: 'Orbitron', sans-serif; margin: 2rem 0 1rem;">Our Leadership</h3>
+                <div class="profile-container">
+                    <div class="profile-card">
+                        <div class="profile-img">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <div class="profile-content">
+                            <h3>Madam Tasneem</h3>
+                            <span class="role">CEO & Founder</span>
+                            <p>Visionary leader with over 15 years of experience in technology education. Passionate about empowering students with practical skills.</p>
+                            <a href="https://wa.me/03333029982" class="whatsapp-btn" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Contact CEO
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 style="color: var(--primary); font-family: 'Orbitron', sans-serif; margin: 2rem 0 1rem;">Our Teachers</h3>
+                <div class="profile-container">
+                    <div class="profile-card">
+                        <div class="profile-img">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="profile-content">
+                            <h3>Sir Syed Azfar</h3>
+                            <span class="role">Web Development Expert</span>
+                            <p>Full-stack developer with 8+ years of experience. Specialized in React, Node.js, and modern web technologies.</p>
+                            <a href="https://wa.me/03110387727" class="whatsapp-btn" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Contact Sir Azfar
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="profile-card">
+                        <div class="profile-img">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <div class="profile-content">
+                            <h3>Miss Fabiya</h3>
+                            <span class="role">Database Specialist</span>
+                            <p>Database architect with expertise in SQL, NoSQL, and data modeling. 6+ years of teaching experience.</p>
+                            <a href="https://wa.me/03118097160" class="whatsapp-btn" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Contact Miss Fabiya
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-window" id="contactWindow">
+        <div class="window-header">
+            <h3>Contact Us</h3>
+            <button class="window-close">&times;</button>
+        </div>
+        <div class="window-body">
+            <div style="max-width: 600px; margin: 0 auto;">
+                <div style="background: rgba(10, 10, 26, 0.7); padding: 2rem; border-radius: 8px; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); border: 1px solid rgba(0, 243, 255, 0.2);">
+                    <div style="text-align: center; margin-bottom: 1.5rem;">
+                        <h3 style="color: var(--primary); font-family: 'Orbitron', sans-serif;">Get In Touch</h3>
+                    </div>
+                    
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" class="form-control" rows="4" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+
+                <div style="margin-top: 2rem; background: rgba(10, 10, 26, 0.7); padding: 1.5rem; border-radius: 8px; border: 1px solid rgba(0, 243, 255, 0.2);">
+                    <h3 style="color: var(--primary); font-family: 'Orbitron', sans-serif; margin-bottom: 1rem;">Contact Information</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Tech Street, Karachi, Pakistan</p>
+                    <p><i class="fas fa-phone"></i> +92 321 1234567</p>
+                    <p><i class="fas fa-envelope"></i> info@cybertech.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="logo-text">CYBER TECH</div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#" class="nav-link" data-window="homeWindow">Home</a></li>
+                        <li><a href="#" class="nav-link" data-window="coursesWindow">Courses</a></li>
+                        <li><a href="#" class="nav-link" data-window="teachersWindow">Teachers</a></li>
+                        <li><a href="#" class="nav-link" data-window="aboutWindow">About Us</a></li>
+                        <li><a href="#" class="nav-link" data-window="contactWindow">Contact</a></li>
+                        <li><a href="#" id="adminLoginBtn">Admin Login</a></li>
+                        <li><a href="#" id="logoutBtn" class="btn btn-danger">Logout</a></li>
+                    </ul>
+                </nav>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>Welcome to CYBER TECH</h1>
+                <p>Empowering the next generation of technology experts with industry-relevant computer education and professional training.</p>
+                <a href="#" class="btn nav-link" data-window="coursesWindow">Explore Courses</a>
+            </div>
+        </section>
+
+        <!-- Courses Preview Section -->
+        <section id="courses-preview">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our Courses</h2>
+                    <p>Discover our comprehensive range of computer courses designed to boost your career in technology</p>
+                </div>
+                
+                <div class="courses-grid">
+                    <div class="course-card">
+                        <div class="course-img">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="course-content">
+                            <h3>Web Development</h3>
+                            <p>Learn to build modern, responsive websites and web applications using the latest technologies.</p>
+                            <div class="course-meta">
+                                <span class="price">12,000 PKR</span>
+                                <a href="#" class="btn nav-link" data-window="coursesWindow">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="course-card">
+                        <div class="course-img">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="course-content">
+                            <h3>Database Management</h3>
+                            <p>Master database design, SQL, and administration with hands-on experience.</p>
+                            <div class="course-meta">
+                                <span class="price">10,000 PKR</span>
+                                <a href="#" class="btn nav-link" data-window="coursesWindow">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="course-card">
+                        <div class="course-img">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="course-content">
+                            <h3>Cyber Security</h3>
+                            <p>Learn to protect systems and networks from digital attacks and security breaches.</p>
+                            <div class="course-meta">
+                                <span class="price">15,000 PKR</span>
+                                <a href="#" class="btn nav-link" data-window="coursesWindow">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="#" class="btn nav-link" data-window="coursesWindow">View All Courses</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Teachers Preview Section -->
+        <section id="teachers-preview" style="background: rgba(5, 5, 16, 0.5);">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our Teachers</h2>
+                    <p>Learn from industry experts with years of experience in their respective fields</p>
+                </div>
+                
+                <div class="teachers-grid">
+                    <div class="teacher-card">
+                        <div class="teacher-img">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="teacher-content">
+                            <h3>Sir Syed Azfar</h3>
+                            <p>Web Development Expert</p>
+                            <a href="https://wa.me/03110387727" class="whatsapp-btn" target="_blank">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="teacher-card">
+                        <div class="teacher-img">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <div class="teacher-content">
+                            <h3>Miss Fabiya</h3>
+                            <p>Database Specialist</p>
+                            <a href="https://wa.me/03118097160" class="whatsapp-btn" target="_blank">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="#" class="btn nav-link" data-window="teachersWindow">Meet All Teachers</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Preview Section -->
+        <section id="about-preview">
+            <div class="container">
+                <div class="section-title">
+                    <h2>About Us</h2>
+                    <p>Learn more about CYBER TECH and our mission to provide quality computer education</p>
+                </div>
+                
+                <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                    <p>CYBER TECH is a premier computer coaching institute founded by Madam Tasneem with the vision to make quality computer education accessible to everyone. We believe in practical, hands-on learning that prepares students for real-world challenges.</p>
+                    <p>Our institute boasts state-of-the-art computer labs, experienced faculty, and a curriculum that is constantly updated to keep pace with the rapidly evolving technology landscape.</p>
+                    
+                    <div style="margin-top: 2rem;">
+                        <a href="#" class="btn nav-link" data-window="aboutWindow">Learn More About Us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Preview Section -->
+        <section id="contact-preview" style="background: rgba(5, 5, 16, 0.5);">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Contact Us</h2>
+                    <p>Reach out to us for any inquiries or to learn more about our courses</p>
+                </div>
+                
+                <div style="max-width: 600px; margin: 0 auto; text-align: center;">
+                    <p>Have questions about our courses or want to enroll? Get in touch with us through any of the following methods:</p>
+                    
+                    <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
+                        <a href="https://wa.me/03333029982" class="whatsapp-btn" target="_blank" style="font-size: 1.2rem; padding: 0.8rem 1.5rem;">
+                            <i class="fab fa-whatsapp"></i> WhatsApp Us
+                        </a>
+                        
+                        <a href="#" class="btn nav-link" data-window="contactWindow">Send a Message</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About CYBER TECH</h3>
+                    <p>Providing quality computer education since 2010. Empowering students with technology skills for the future.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Tech Street, Karachi, Pakistan</p>
+                    <p><i class="fas fa-phone"></i> +92 321 1234567</p>
+                    <p><i class="fas fa-envelope"></i> info@cybertech.com</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 CYBER TECH. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Admin Login Modal -->
+    <div class="modal" id="adminLoginModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Admin Login</h3>
+                <button class="close-btn">&times;</button>
+            </div>
+            
+            <form id="adminLoginForm">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" class="form-control" required>
+                </div>
+                
+                <button type="submit" class="btn" style="width: 100%;">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Admin Dashboard -->
+    <div class="admin-dashboard" id="adminDashboard">
+        <div class="dashboard-content">
+            <div class="dashboard-header">
+                <h2>Admin Dashboard</h2>
+                <button class="btn btn-danger" id="dashboardLogout">Logout</button>
+            </div>
+            
+            <div class="dashboard-body">
+                <div class="admin-tabs">
+                    <div class="admin-tab active" data-tab="coursesManagement">Courses Management</div>
+                    <div class="admin-tab" data-tab="teachersManagement">Teachers Management</div>
+                </div>
+                
+                <div class="admin-tab-content active" id="coursesManagement">
+                    <h3 style="color: var(--primary); margin-bottom: 1.5rem; font-family: 'Orbitron', sans-serif;">Manage Courses</h3>
+                    
+                    <div class="form-group">
+                        <h4 style="color: var(--light); margin-bottom: 1rem;">Add New Course</h4>
+                        <form id="courseForm">
+                            <div class="form-group">
+                                <label for="courseName">Course Name</label>
+                                <input type="text" id="courseName" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="courseDescription">Description</label>
+                                <textarea id="courseDescription" class="form-control" rows="3" required></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="coursePrice">Price (PKR)</label>
+                                <input type="number" id="coursePrice" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="courseImage">Icon Class (Font Awesome)</label>
+                                <input type="text" id="courseImage" class="form-control" value="fas fa-laptop-code" required>
+                                <small style="color: var(--gray);">e.g., fas fa-code, fas fa-database</small>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="courseDetails">Course Details (for modal)</label>
+                                <textarea id="courseDetails" class="form-control" rows="5" required>• Comprehensive curriculum covering all essential topics
+• Hands-on projects and real-world applications
+• Experienced instructors with industry expertise
+• Flexible learning schedule
+• Certificate of completion</textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn">Add Course</button>
+                        </form>
+                    </div>
+                    
+                    <div class="form-group">
+                        <h4 style="color: var(--light); margin-bottom: 1rem;">Existing Courses</h4>
+                        <div class="management-list" id="coursesList">
+                            <!-- Courses list for management -->
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="admin-tab-content" id="teachersManagement">
+                    <h3 style="color: var(--primary); margin-bottom: 1.5rem; font-family: 'Orbitron', sans-serif;">Manage Teachers</h3>
+                    
+                    <div class="form-group">
+                        <h4 style="color: var(--light); margin-bottom: 1rem;">Add New Teacher</h4>
+                        <form id="teacherForm">
+                            <div class="form-group">
+                                <label for="teacherName">Teacher Name</label>
+                                <input type="text" id="teacherName" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="teacherSpecialty">Specialty</label>
+                                <input type="text" id="teacherSpecialty" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="teacherPhone">WhatsApp Number</label>
+                                <input type="text" id="teacherPhone" class="form-control" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="teacherIcon">Icon Class (Font Awesome)</label>
+                                <input type="text" id="teacherIcon" class="form-control" value="fas fa-user-tie" required>
+                                <small style="color: var(--gray);">e.g., fas fa-user-graduate, fas fa-chalkboard-teacher</small>
+                            </div>
+                            
+                            <button type="submit" class="btn">Add Teacher</button>
+                        </form>
+                    </div>
+                    
+                    <div class="form-group">
+                        <h4 style="color: var(--light); margin-bottom: 1rem;">Existing Teachers</h4>
+                        <div class="management-list" id="teachersList">
+                            <!-- Teachers list for management -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Course Detail Modal -->
+    <div class="course-detail-modal" id="courseDetailModal">
+        <div class="course-detail-content">
+            <div class="course-detail-header">
+                <h2 id="detailCourseName">Course Name</h2>
+                <button class="close-btn" id="closeCourseDetail">&times;</button>
+            </div>
+            
+            <div class="course-detail-body">
+                <div class="course-detail-info">
+                    <p id="detailCourseDescription">Course description will appear here.</p>
+                    
+                    <div class="course-meta" style="margin: 1.5rem 0;">
+                        <span class="price" id="detailCoursePrice">0 PKR</span>
+                        <a href="#" class="btn" id="enrollCourseBtn">Enroll Now</a>
+                    </div>
+                    
+                    <h3 style="color: var(--primary); font-family: 'Orbitron', sans-serif; margin-bottom: 1rem;">Course Details</h3>
+                    <div id="detailCourseDetails">
+                        <!-- Course details will be added here -->
+                    </div>
+                </div>
+                
+                <div class="course-detail-image">
+                    <i id="detailCourseIcon" class="fas fa-laptop-code"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/03333029982" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Data storage
+        let courses = [
+            { id: 1, name: "Web Development", description: "Learn to build modern, responsive websites and web applications using the latest technologies.", price: 12000, icon: "fas fa-code", details: "• Comprehensive curriculum covering HTML, CSS, JavaScript, and frameworks\n• Hands-on projects and real-world applications\n• Experienced instructors with industry expertise\n• Flexible learning schedule\n• Certificate of completion" },
+            { id: 2, name: "Database Management", description: "Master database design, SQL, and administration with hands-on experience.", price: 10000, icon: "fas fa-database", details: "• Learn SQL fundamentals and advanced queries\n• Database design and normalization\n• Administration and optimization techniques\n• Real-world projects and case studies\n• Certificate of completion" },
+            { id: 3, name: "Cyber Security", description: "Learn to protect systems and networks from digital attacks and security breaches.", price: 15000, icon: "fas fa-shield-alt", details: "• Fundamentals of cybersecurity and ethical hacking\n• Network security and vulnerability assessment\n• Penetration testing techniques\n• Security tools and technologies\n• Certificate of completion" }
+        ];
+
+        let teachers = [
+            { id: 1, name: "Sir Syed Azfar", specialty: "Web Development Expert", phone: "03110387727", icon: "fas fa-user-tie" },
+            { id: 2, name: "Miss Fabiya", specialty: "Database Specialist", phone: "03118097160", icon: "fas fa-user-graduate" }
+        ];
+
+        // DOM Elements
+        const adminLoginBtn = document.getElementById('adminLoginBtn');
+        const logoutBtn = document.getElementById('logoutBtn');
+        const dashboardLogout = document.getElementById('dashboardLogout');
+        const adminLoginModal = document.getElementById('adminLoginModal');
+        const adminDashboard = document.getElementById('adminDashboard');
+        const closeBtn = document.querySelector('.close-btn');
+        const adminLoginForm = document.getElementById('adminLoginForm');
+        const courseForm = document.getElementById('courseForm');
+        const teacherForm = document.getElementById('teacherForm');
+        const coursesContainer = document.getElementById('coursesContainer');
+        const teachersContainer = document.getElementById('teachersContainer');
+        const coursesList = document.getElementById('coursesList');
+        const teachersList = document.getElementById('teachersList');
+        const courseDetailModal = document.getElementById('courseDetailModal');
+        const closeCourseDetail = document.getElementById('closeCourseDetail');
+        const contactForm = document.getElementById('contactForm');
+        const windowOverlay = document.getElementById('windowOverlay');
+        
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', function() {
+            renderCourses();
+            renderTeachers();
+            
+            // Check if user was previously logged in
+            if (localStorage.getItem('adminLoggedIn') === 'true') {
+                logoutBtn.style.display = 'block';
+            }
+        });
+
+        // Render courses to the page
+        function renderCourses() {
+            if (coursesContainer) {
+                coursesContainer.innerHTML = '';
+                courses.forEach(course => {
+                    const courseCard = document.createElement('div');
+                    courseCard.className = 'course-card';
+                    courseCard.setAttribute('data-id', course.id);
+                    courseCard.innerHTML = `
+                        <div class="course-img">
+                            <i class="${course.icon}"></i>
+                        </div>
+                        <div class="course-content">
+                            <h3>${course.name}</h3>
+                            <p>${course.description}</p>
+                            <div class="course-meta">
+                                <span class="price">${course.price.toLocaleString()} PKR</span>
+                                <a href="#" class="btn">Enroll Now</a>
+                            </div>
+                        </div>
+                    `;
+                    coursesContainer.appendChild(courseCard);
+                    
+                    // Add click event to course card
+                    courseCard.addEventListener('click', function(e) {
+                        if (!e.target.classList.contains('btn')) {
+                            showCourseDetail(course.id);
+                        }
+                    });
+                    
+                    // Add click event to enroll button
+                    const enrollBtn = courseCard.querySelector('.btn');
+                    enrollBtn.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        openWhatsApp('03333029982', `I want to know about your ${course.name} course`);
+                    });
+                });
+            }
+            
+            // Render courses for management
+            if (coursesList) {
+                coursesList.innerHTML = '';
+                courses.forEach(course => {
+                    const courseItem = document.createElement('div');
+                    courseItem.className = 'management-item';
+                    courseItem.innerHTML = `
+                        <div class="management-item-info">
+                            <h4>${course.name}</h4>
+                            <p>${course.price.toLocaleString()} PKR</p>
+                        </div>
+                        <div>
+                            <button class="btn btn-danger" onclick="deleteCourse(${course.id})">Delete</button>
+                        </div>
+                    `;
+                    coursesList.appendChild(courseItem);
+                });
+            }
+        }
+
+        // Render teachers to the page
+        function renderTeachers() {
+            if (teachersContainer) {
+                teachersContainer.innerHTML = '';
+                teachers.forEach(teacher => {
+                    const teacherCard = document.createElement('div');
+                    teacherCard.className = 'teacher-card';
+                    teacherCard.innerHTML = `
+                        <div class="teacher-img">
+                            <i class="${teacher.icon}"></i>
+                        </div>
+                        <div class="teacher-content">
+                            <h3>${teacher.name}</h3>
+                            <p>${teacher.specialty}</p>
+                            <a href="https://wa.me/${teacher.phone}" class="whatsapp-btn" target="_blank">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </a>
+                        </div>
+                    `;
+                    teachersContainer.appendChild(teacherCard);
+                });
+            }
+            
+            // Render teachers for management
+            if (teachersList) {
+                teachersList.innerHTML = '';
+                teachers.forEach(teacher => {
+                    const teacherItem = document.createElement('div');
+                    teacherItem.className = 'management-item';
+                    teacherItem.innerHTML = `
+                        <div class="management-item-info">
+                            <h4>${teacher.name}</h4>
+                            <p>${teacher.specialty}</p>
+                        </div>
+                        <div>
+                            <button class="btn btn-danger" onclick="deleteTeacher(${teacher.id})">Delete</button>
+                        </div>
+                    `;
+                    teachersList.appendChild(teacherItem);
+                });
+            }
+        }
+
+        // Show course detail modal
+        function showCourseDetail(courseId) {
+            const course = courses.find(c => c.id === courseId);
+            if (course) {
+                document.getElementById('detailCourseName').textContent = course.name;
+                document.getElementById('detailCourseDescription').textContent = course.description;
+                document.getElementById('detailCoursePrice').textContent = `${course.price.toLocaleString()} PKR`;
+                document.getElementById('detailCourseIcon').className = course.icon;
+                
+                // Format course details with line breaks
+                const detailsContainer = document.getElementById('detailCourseDetails');
+                detailsContainer.innerHTML = '';
+                course.details.split('\n').forEach(detail => {
+                    const p = document.createElement('p');
+                    p.textContent = detail;
+                    p.style.marginBottom = '0.5rem';
+                    detailsContainer.appendChild(p);
+                });
+                
+                // Set up enroll button
+                const enrollBtn = document.getElementById('enrollCourseBtn');
+                enrollBtn.onclick = function(e) {
+                    e.preventDefault();
+                    openWhatsApp('03333029982', `I want to enroll in your ${course.name} course`);
+                };
+                
+                // Show modal
+                courseDetailModal.style.display = 'flex';
+                windowOverlay.style.display = 'block';
+            }
+        }
+
+        // Open WhatsApp with pre-filled message
+        function openWhatsApp(phone, message) {
+            const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+        }
+
+        // Show Admin Login Modal
+        adminLoginBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            adminLoginModal.style.display = 'flex';
+            windowOverlay.style.display = 'block';
+        });
+        
+        // Close Modal
+        closeBtn.addEventListener('click', function() {
+            adminLoginModal.style.display = 'none';
+            windowOverlay.style.display = 'none';
+        });
+        
+        closeCourseDetail.addEventListener('click', function() {
+            courseDetailModal.style.display = 'none';
+            windowOverlay.style.display = 'none';
+        });
+        
+        // Close modal if clicked outside
+        window.addEventListener('click', function(e) {
+            if (e.target === adminLoginModal) {
+                adminLoginModal.style.display = 'none';
+                windowOverlay.style.display = 'none';
+            }
+            if (e.target === courseDetailModal) {
+                courseDetailModal.style.display = 'none';
+                windowOverlay.style.display = 'none';
+            }
+        });
+        
+        // Admin Login Form Submission
+        adminLoginForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            
+            // Check credentials
+            if (username === 'admin' && password === 'admin123') {
+                alert('Login successful!');
+                adminLoginModal.style.display = 'none';
+                windowOverlay.style.display = 'none';
+                
+                // Save login state
+                localStorage.setItem('adminLoggedIn', 'true');
+                
+                // Show admin dashboard
+                adminDashboard.style.display = 'block';
+                windowOverlay.style.display = 'block';
+                logoutBtn.style.display = 'block';
+            } else {
+                alert('Invalid credentials. Please try again.');
+            }
+        });
+        
+        // Logout functionality
+        function logout() {
+            localStorage.setItem('adminLoggedIn', 'false');
+            adminDashboard.style.display = 'none';
+            windowOverlay.style.display = 'none';
+            logoutBtn.style.display = 'none';
+            alert('You have been logged out successfully.');
+        }
+        
+        logoutBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            logout();
+        });
+        
+        dashboardLogout.addEventListener('click', function(e) {
+            e.preventDefault();
+            logout();
+        });
+        
+        // Course Form Submission
+        courseForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const courseName = document.getElementById('courseName').value;
+            const courseDescription = document.getElementById('courseDescription').value;
+            const coursePrice = document.getElementById('coursePrice').value;
+            const courseImage = document.getElementById('courseImage').value;
+            const courseDetails = document.getElementById('courseDetails').value;
+            
+            // Add new course
+            const newCourse = {
+                id: courses.length + 1,
+                name: courseName,
+                description: courseDescription,
+                price: parseInt(coursePrice),
+                icon: courseImage,
+                details: courseDetails
+            };
+            
+            courses.push(newCourse);
+            renderCourses();
+            
+            alert(`Course "${courseName}" added successfully!`);
+            
+            // Reset form
+            courseForm.reset();
+            document.getElementById('courseImage').value = 'fas fa-laptop-code';
+            document.getElementById('courseDetails').value = '• Comprehensive curriculum covering all essential topics\n• Hands-on projects and real-world applications\n• Experienced instructors with industry expertise\n• Flexible learning schedule\n• Certificate of completion';
+        });
+        
+        // Teacher Form Submission
+        teacherForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const teacherName = document.getElementById('teacherName').value;
+            const teacherSpecialty = document.getElementById('teacherSpecialty').value;
+            const teacherPhone = document.getElementById('teacherPhone').value;
+            const teacherIcon = document.getElementById('teacherIcon').value;
+            
+            // Add new teacher
+            const newTeacher = {
+                id: teachers.length + 1,
+                name: teacherName,
+                specialty: teacherSpecialty,
+                phone: teacherPhone,
+                icon: teacherIcon
+            };
+            
+            teachers.push(newTeacher);
+            renderTeachers();
+            
+            alert(`Teacher "${teacherName}" added successfully!`);
+            
+            // Reset form
+            teacherForm.reset();
+            document.getElementById('teacherIcon').value = 'fas fa-user-tie';
+        });
+        
+        // Contact Form Submission
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            const fullMessage = `Hello, I am ${name} (${email}). I have a query: ${message}`;
+            openWhatsApp('03333029982', fullMessage);
+            
+            // Reset form
+            contactForm.reset();
+        });
+        
+        // Delete course
+        function deleteCourse(id) {
+            if (confirm('Are you sure you want to delete this course?')) {
+                courses = courses.filter(course => course.id !== id);
+                renderCourses();
+                alert('Course deleted successfully!');
+            }
+        }
+        
+        // Delete teacher
+        function deleteTeacher(id) {
+            if (confirm('Are you sure you want to delete this teacher?')) {
+                teachers = teachers.filter(teacher => teacher.id !== id);
+                renderTeachers();
+                alert('Teacher deleted successfully!');
+            }
+        }
+        
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const nav = document.querySelector('nav ul');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+        });
+        
+        // Admin tabs functionality
+        document.querySelectorAll('.admin-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Remove active class from all tabs
+                document.querySelectorAll('.admin-tab').forEach(t => {
+                    t.classList.remove('active');
+                });
+                
+                // Add active class to clicked tab
+                this.classList.add('active');
+                
+                // Hide all tab content
+                document.querySelectorAll('.admin-tab-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+                
+                // Show the corresponding tab content
+                const tabId = this.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+        
+        // Dynamic window functionality
+        const navLinks = document.querySelectorAll('.nav-link');
+        const windows = document.querySelectorAll('.content-window');
+        const windowCloseButtons = document.querySelectorAll('.window-close');
+        
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const windowId = this.getAttribute('data-window');
+                const window = document.getElementById(windowId);
+                
+                // Hide all windows
+                windows.forEach(w => {
+                    w.style.display = 'none';
+                });
+                
+                // Show the selected window
+                window.style.display = 'block';
+                windowOverlay.style.display = 'block';
+                
+                // Render content if needed
+                if (windowId === 'coursesWindow') {
+                    renderCourses();
+                } else if (windowId === 'teachersWindow') {
+                    renderTeachers();
+                }
+            });
+        });
+        
+        windowCloseButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Hide all windows
+                windows.forEach(w => {
+                    w.style.display = 'none';
+                });
+                
+                windowOverlay.style.display = 'none';
+            });
+        });
+        
+        // Close window when clicking outside
+        windowOverlay.addEventListener('click', function() {
+            // Hide all windows
+            windows.forEach(w => {
+                w.style.display = 'none';
+            });
+            
+            windowOverlay.style.display = 'none';
+            adminLoginModal.style.display = 'none';
+            adminDashboard.style.display = 'none';
+            courseDetailModal.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
